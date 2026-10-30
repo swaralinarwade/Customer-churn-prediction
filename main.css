@@ -1,0 +1,227 @@
+/* ==========================================================================
+   STREAMSCOPE — Subscriber Intelligence Platform
+   Cinematic Editorial Design System & Styling
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset and Root Variables */
+:root {
+    --bg-dark: #0d0e12;
+    --surface-graphite: #181a20;
+    --surface-elevated: #1f2128;
+    --border-subtle: #262933;
+    --border-accent: #373b47;
+    --crimson: #d9232e;
+    --crimson-hover: #b81d26;
+    --white-soft: #f3f4f6;
+    --text-muted: #8a8f98;
+    --text-dim: #636874;
+    --green-success: #10b981;
+    --amber-warning: #f59e0b;
+    --red-danger: #ef4444;
+}
+
+/* Global Container & Typography */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.stApp {
+    background-color: var(--bg-dark);
+    color: var(--white-soft);
+}
+
+/* Hide Default Streamlit Clutter */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Custom Brand Header */
+.brand-container {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 6px 0 24px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 24px;
+}
+
+.brand-symbol {
+    color: var(--crimson);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+.brand-wordmark {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--white-soft);
+    text-transform: uppercase;
+}
+
+.brand-subtitle {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding-left: 10px;
+    border-left: 1px solid var(--border-subtle);
+}
+
+/* Editorial Section Titles */
+.editorial-header {
+    margin-bottom: 22px;
+}
+
+.editorial-header h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--white-soft);
+    letter-spacing: -0.02em;
+    margin: 0 0 6px 0;
+}
+
+.editorial-header p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Compact Horizontal Metric Strip */
+.metric-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.metric-strip-item {
+    background-color: var(--surface-graphite);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 14px 18px;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.metric-strip-item:hover {
+    border-color: var(--border-accent);
+    background-color: var(--surface-elevated);
+}
+
+.metric-strip-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+}
+
+.metric-strip-value {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--white-soft);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.metric-strip-meta {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-top: 4px;
+}
+
+/* Sidebar Customization */
+section[data-testid="stSidebar"] {
+    background-color: #121318 !important;
+    border-right: 1px solid var(--border-subtle);
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] {
+    display: none;
+}
+
+.sidebar-brand-box {
+    padding: 16px 12px 20px 12px;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 20px;
+}
+
+/* Asymmetrical Content Panel */
+.panel-graphite {
+    background-color: var(--surface-graphite);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin-bottom: 20px;
+}
+
+.panel-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Risk Banners */
+.banner-risk-high {
+    background-color: rgba(239, 68, 68, 0.08);
+    border-left: 3px solid var(--red-danger);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin-top: 18px;
+}
+
+.banner-risk-low {
+    background-color: rgba(16, 185, 129, 0.08);
+    border-left: 3px solid var(--green-success);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin-top: 18px;
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: var(--crimson) !important;
+    color: var(--white-soft) !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 8px 20px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.02em !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.stButton>button:hover {
+    background-color: var(--crimson-hover) !important;
+}
+
+/* Secondary Action Buttons */
+.btn-secondary>button {
+    background-color: var(--surface-elevated) !important;
+    border: 1px solid var(--border-subtle) !important;
+    color: var(--text-muted) !important;
+}
+
+.btn-secondary>button:hover {
+    border-color: var(--border-accent) !important;
+    color: var(--white-soft) !important;
+}
+
+/* Data Table Styling */
+.dataframe {
+    background-color: var(--surface-graphite) !important;
+    color: var(--white-soft) !important;
+    border: 1px solid var(--border-subtle) !important;
+    font-size: 0.85rem !important;
+}

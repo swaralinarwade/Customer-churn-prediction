@@ -1,0 +1,4 @@
+Algorithm,Accuracy,Precision (Churn),Recall (Churn),F1-Score,ROC-AUC
+Logistic Regression,0.7325,0.499,0.7469,0.5982,0.7991
+Decision Tree,0.7125,0.4682,0.575,0.5161,0.7508
+Random Forest,0.745,0.5168,0.6719,0.5842,0.7899
